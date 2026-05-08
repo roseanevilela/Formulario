@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produtos - Padaria</title>
+</head>
+<body>
+ 
+    <form>
+        <table width="100%">
+ 
+            <tr>
+                <td width="20%"></td>
+                <td width="60%"><h1 align="center">Cadastro de Produtos da Padaria</h1></td>
+                <td width="20%"></td>
+            </tr>
+ 
+            <tr>
+                <td></td>
+                <td><p align="center"><br><br><br>
+ 
+                <fieldset>
+                <legend><b>Identificação do Produto:</b></legend>
+                <br>
+                <p align="center">
+ 
+                <label for="nome_produto">Nome do Produto:</label><br>
+                <input type="text" id="nome_produto" name="nome_produto" placeholder="Ex: Bolo de Chocolate" required><br><br><br>
+ 
+                <label for="codigo">Código do Produto:</label><br>
+                <input type="text" id="codigo" name="codigo" placeholder="Ex: BOL-001" required><br><br><br>
+ 
+                <label>Categoria:</label><br>
+                <select id="categoria" name="categoria" required>
+                    <option value="">Selecione uma categoria</option>
+                    <option value="bolo">Bolo</option>
+                    <option value="torta">Torta</option>
+                    <option value="pao">Pão</option>
+                </select><br><br><br>
+ 
+                <label for="subcategoria">Subcategoria:</label><br>
+                <select id="subcategoria" name="subcategoria">
+                    <option value="">Selecione uma subcategoria</option>
+                    <option value="doce">Doce</option>
+                    <option value="salgado">Salgado</option>
+                    <option value="integral">Integral</option>
+                    <option value="sem_gluten">Sem Glúten</option>
+                    <option value="vegano">Vegano</option>
+                </select><br><br><br>
+ 
+                <label for="descricao">Descrição do Produto:</label><br>
+                <textarea id="descricao" name="descricao" rows="4" cols="40" placeholder="Descreva os ingredientes e características do produto..." required></textarea><br><br><br>
+ 
+                <label>Contém Glúten?</label><br>
+                <label>Sim</label>
+                <input type="checkbox" name="gluten" value="sim">
+                <label>Não</label>
+                <input type="checkbox" name="gluten" value="nao"><br><br><br>
+ 
+                <label>Contém Lactose?</label><br>
+                <label>Sim</label>
+                <input type="checkbox" name="lactose" value="sim">
+                <label>Não</label>
+                <input type="checkbox" name="lactose" value="nao"><br><br><br>
+ 
+                </p>
+                </fieldset><br><br><br>
+ 
+                <fieldset>
+                <legend><b>Produção e Validade:</b></legend><br>
+ 
+                <p align="center">
+ 
+                <label for="data_producao">Data de Produção:</label><br><br>
+                <input type="date" id="data_producao" name="data_producao" required><br><br><br>
+ 
+                <label for="data_validade">Data de Validade:</label><br><br>
+                <input type="date" id="data_validade" name="data_validade" required><br><br><br>
+ 
+                <label for="horario_producao">Horário de Produção:</label><br><br>
+                <input type="time" id="horario_producao" name="horario_producao" required><br><br><br>
+ 
+                <label for="funcionario">Funcionário Responsável:</label><br>
+                <input type="text" id="funcionario" name="funcionario" placeholder="Nome do funcionário" required><br><br><br>
+ 
+                <label for="lote">Número do Lote:</label><br>
+                <input type="text" id="lote" name="lote" placeholder="Ex: LOTE-20250508" required><br><br><br>
+ 
+                </p>
+                </fieldset><br><br><br>
+ 
+                <fieldset>
+                <legend><b>Peso, Tamanho e Quantidade:</b></legend><br>
+ 
+                <p align="center">
+ 
+                <label for="peso">Peso (gramas):</label><br>
+                <input type="number" id="peso" name="peso" placeholder="Ex: 500" min="1" required><br><br><br>
+ 
+                <label>Tamanho:</label><br>
+                <select id="tamanho" name="tamanho" required>
+                    <option value="">Selecione o tamanho</option>
+                    <option value="mini">Mini</option>
+                    <option value="pequeno">Pequeno</option>
+                    <option value="medio">Médio</option>
+                    <option value="grande">Grande</option>
+                    <option value="familia">Família</option>
+                </select><br><br><br>
+ 
+                <label for="quantidade">Quantidade Produzida (unidades):</label><br>
+                <input type="number" id="quantidade" name="quantidade" placeholder="Ex: 10" min="1" required><br><br><br>
+ 
+                </p>
+                </fieldset><br><br><br>
+ 
+                <fieldset>
+                <legend><b>Preço e Armazenamento:</b></legend><br>
+ 
+                <p align="center">
+ 
+                <label for="preco">Preço de Venda (R$):</label><br>
+                <input type="number" id="preco" name="preco" placeholder="Ex: 35.00" step="0.01" min="0" required><br><br><br>
+ 
+                <label for="custo">Custo de Produção (R$):</label><br>
+                <input type="number" id="custo" name="custo" placeholder="Ex: 18.50" step="0.01" min="0"><br><br><br>
+ 
+                <label>Forma de Armazenamento:</label><br>
+                <select id="armazenamento" name="armazenamento" required>
+                    <option value="">Selecione</option>
+                    <option value="temperatura_ambiente">Temperatura Ambiente</option>
+                    <option value="refrigerado">Refrigerado</option>
+                    <option value="congelado">Congelado</option>
+                </select><br><br><br>
+ 
+                <label>Disponível para Venda?</label><br>
+                <label>Sim</label>
+                <input type="checkbox" name="disponivel" value="sim" checked>
+                <label>Não</label>
+                <input type="checkbox" name="disponivel" value="nao"><br><br><br>
+ 
+                <label for="observacoes">Observações:</label><br>
+                <textarea id="observacoes" name="observacoes" rows="3" cols="40" placeholder="Informações adicionais sobre o produto..."></textarea><br><br><br>
+ 
+                </p>
+                </fieldset><br><br>
+ 
+                <button type="submit">Cadastrar Produto</button>
+                <button type="reset">Limpar Formulário</button>
+ 
+                </p>
+                </td>
+                <td></td>
+            </tr>
+ 
+        </table>
+    </form>
+ 
+</body>
+</html>
+
